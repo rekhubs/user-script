@@ -8,6 +8,8 @@
 // @include     *bandcamp.com/?token=*
 // @include     *bandcamp.com/
 // @version     0.1
+// @updateURL 	https://openuserjs.org/install/rekhubs/Bandcamp_Weekly_Scrobbler.user.js
+// @downloadURL	https://openuserjs.org/install/rekhubs/Bandcamp_Weekly_Scrobbler.user.js
 // @grant 		GM_getValue
 // @grant 		GM_setValue
 // @grant 		GM_deleteValue
