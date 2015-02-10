@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name        Jira Goto "Activity" Column
-// @namespace   a
+// @namespace   https://openuserjs.org/install/rekhubs/Jira_Goto_Activity_Column.user.js
 // @include     */jira.*.com/browse/*
+// @updateURL 	https://openuserjs.org/install/rekhubs/Jira_Goto_Activity_Column.user.js
+// @downloadURL	https://openuserjs.org/install/rekhubs/Jira_Goto_Activity_Column.user.js
 // @version     0.1
 // @grant       none
 // ==/UserScript==
