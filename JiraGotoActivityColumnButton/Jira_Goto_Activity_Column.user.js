@@ -4,7 +4,7 @@
 // @include     */jira.*.com/browse/*
 // @updateURL 	https://openuserjs.org/install/rekhubs/Jira_Goto_Activity_Column.user.js
 // @downloadURL	https://openuserjs.org/install/rekhubs/Jira_Goto_Activity_Column.user.js
-// @version     0.1
+// @version     0.11
 // @grant       none
 // ==/UserScript==
 
