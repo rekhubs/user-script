@@ -28,7 +28,7 @@ console.log(toolbar);
 var actButton = document.createElement('ul');
 actButton.innerHTML = '<li class="toolbar-item">\
 	<div class="toolbar-trigger issueaction-workflow-transition">\
-	<a  href="#structuremodule">\
+	<a  href="#view-subtasks_heading">\
 	Goto Activity Column\
 	</div></a></li>';
 console.log(actButton.innerHTML);
