@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name        Spotify Scrobbler
-// @namespace   aaa
+// @namespace   https://openuserjs.org/users/rekhubs
 // @description Scrobbler Spotify last.fm
 // @include     *play.spotify.com/*
 // @require     http://justan.github.io/gmscrobber/simple_scrobbler_user.js
+// @updateURL 	https://openuserjs.org/install/rekhubs/Spotify_Scrobbler.user.js
+// @downloadURL	https://openuserjs.org/install/rekhubs/Spotify_Scrobbler.user.js
 // @version     0.1
 // @grant 		GM_getValue
 // @grant 		GM_setValue
@@ -13,8 +15,6 @@
 // ==/UserScript==
 
 
-// @updateURL 	xx
-// @downloadURL	xx
 
 console.log("hello");
 
