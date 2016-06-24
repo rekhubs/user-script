@@ -4,7 +4,7 @@
 // @description 记录虾米播放记录到last.fm
 // @include     http://www.xiami.com/play*
 // @require     http://justan.github.io/gmscrobber/simple_scrobbler_user.js
-// @version     0.11
+// @version     0.12
 // @updateURL 	https://openuserjs.org/install/rekhubs/Xiami_Scrobbler(GM).user.js
 // @downloadURL	https://openuserjs.org/install/rekhubs/Xiami_Scrobbler(GM).user.js
 // @grant 		GM_getValue
@@ -55,14 +55,14 @@ console.log("new scrobbler done");
 
 var getSongInfo = function(){
 	var song = {};
-	// console.log("!!! logging from inside");
+	 console.log("!!! logging from func inside - getSongInfo()");
 	var currentTrack = document.getElementsByClassName("ui-row-item ui-track-item ui-track-current")[0];
-	song.title = currentTrack.getElementsByClassName("ui-row-item-column c1")[0].getElementsByTagName("span")[0].title;
-	// console.log("title", song.title);
-	song.artist = currentTrack.getElementsByClassName("ui-row-item-column c2")[0].getElementsByTagName("a")[0].title;
-	// console.log("artist=", song.artist);
+	song.title =  currentTrack.getElementsByClassName("ui-row-item-column c1")[0].getElementsByTagName("span")[0].title;
+	console.log("title", song.title);
+	song.artist = currentTrack.getElementsByClassName("ui-row-item-column c2")[0].innerHTML;
+	console.log("artist=", song.artist);
 	song.album = currentTrack.getElementsByClassName("ui-row-item-column c3")[0].getElementsByTagName("a")[0].title;
-	// console.log("album=", song.album);
+	console.log("album=", song.album);
 	var timeStr = document.getElementById("J_durationTime").innerHTML;
 	song.duration = timeParse(timeStr);
 	song.duration = Math.floor(song.duration);
@@ -73,8 +73,9 @@ var getSongInfo = function(){
 	// console.log("playTime", song.playTime);
 	var percent = document.getElementById("J_playerDot").style.left.replace(/%/, '');
 	// console.log("percent", percent);
+    console.log("song obj: ", song);
 	return song;
-}
+};
 
 var timeParse = function(timeStr){
 	var ts = timeStr.replace(/-/, '').split(':');
