@@ -4,6 +4,6 @@ _* Requiring [GMScrobbler](https://github.com/justan/gmscrobber)_
 
 ### why?
 This user script supports
- * Click "add" button to love this track in last.fm
+ * Click "add" button --> love track --> last.fm
  * Now playing notification
 
