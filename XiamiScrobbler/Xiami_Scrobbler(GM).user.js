@@ -4,7 +4,7 @@
 // @description 记录虾米播放记录到last.fm
 // @include     http://www.xiami.com/play*
 // @require     http://justan.github.io/gmscrobber/simple_scrobbler_user.js
-// @version     0.12
+// @version     0.13
 // @updateURL 	https://openuserjs.org/install/rekhubs/Xiami_Scrobbler(GM).user.js
 // @downloadURL	https://openuserjs.org/install/rekhubs/Xiami_Scrobbler(GM).user.js
 // @grant 		GM_getValue
@@ -59,7 +59,7 @@ var getSongInfo = function(){
 	var currentTrack = document.getElementsByClassName("ui-row-item ui-track-item ui-track-current")[0];
 	song.title =  currentTrack.getElementsByClassName("ui-row-item-column c1")[0].getElementsByTagName("span")[0].title;
 	console.log("title", song.title);
-	song.artist = currentTrack.getElementsByClassName("ui-row-item-column c2")[0].innerHTML;
+	song.artist = currentTrack.getElementsByClassName("ui-row-item-column c2")[0].getElementsByTagName("a")[0].title;
 	console.log("artist=", song.artist);
 	song.album = currentTrack.getElementsByClassName("ui-row-item-column c3")[0].getElementsByTagName("a")[0].title;
 	console.log("album=", song.album);
