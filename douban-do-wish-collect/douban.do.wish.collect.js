@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Douban do, wish, collect
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  shortcut to your books, music and films
 // @author       rek
 // @match        https://*.douban.com/*
@@ -50,19 +50,19 @@
     // 🧚🔖
 
     let block = `<li id="${BLOCK_ID}">
-        <div style="padding: 0 10px">在想过...🔖</div>
+        <div id="menu-do-wish-collect" style="padding: 0 10px">在想过...🔖</div>
         <div class="more-items">
-            <div style="font-size:20px; margin: 0 20px">🪗🥁🎸</div>
+            <div style="font-size:14px; margin: 0 15px">🪗🥁🎸</div>
             <a href="https://music.douban.com/mine?status=do">在听</a>
             <a href="https://music.douban.com/mine?status=wish">想听</a>
             <a href="https://music.douban.com/mine?status=collect">听过</a>
             
-            <div style="font-size:20px; margin: 0 15px">🎞️🎬🎥</div>
+            <div style="font-size:14px; margin: 0 15px">🎞️🎬🎥</div>
             <a href="https://movie.douban.com/mine?status=do">在看</a>
             <a href="https://movie.douban.com/mine?status=wish">想看</a>
             <a href="https://movie.douban.com/mine?status=collect">看过</a>
 
-            <div style="font-size:20px; margin: 0 15px">📕📗📘</div>
+            <div style="font-size:14px; margin: 0 15px">📕📗📘</div>
             <a href="https://book.douban.com/mine?status=do">在读</a>
             <a href="https://book.douban.com/mine?status=wish">想读</a>
             <a href="https://book.douban.com/mine?status=collect">读过</a>
@@ -71,6 +71,7 @@
     </li>`
 
     navEle.after(block);
+    $('#menu-do-wish-collect').css('cursor', 'pointer');
 
     $(window).click(function (e) {
         if ($(e.target).is(`#${BLOCK_ID}`) || $(e.target).parents(`#${BLOCK_ID}`).length > 0) {
