@@ -52,7 +52,7 @@
     let block = `<li id="${BLOCK_ID}">
         <div id="menu-do-wish-collect" style="padding: 0 10px">在想过...🔖</div>
         <div class="more-items">
-            <div style="font-size:14px; margin: 0 15px">🪗🥁🎸</div>
+            <div style="font-size:14px; margin: 0 15px">💽🎻🎺</div>
             <a href="https://music.douban.com/mine?status=do">在听</a>
             <a href="https://music.douban.com/mine?status=wish">想听</a>
             <a href="https://music.douban.com/mine?status=collect">听过</a>
